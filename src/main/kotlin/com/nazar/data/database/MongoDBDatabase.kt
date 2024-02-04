@@ -1,11 +1,12 @@
-package com.nazar.base.providers.database
+package com.nazar.data.database
 
 import com.nazar.feature.logs.entity.LogEntity
 import org.litote.kmongo.coroutine.CoroutineClient
 import org.litote.kmongo.coroutine.CoroutineCollection
 import org.litote.kmongo.coroutine.CoroutineDatabase
 
-interface DatabaseProvider {
+//TODO Move to data module
+interface MongoDBDatabase {
 
     val initializeName: String
 

@@ -1,5 +1,6 @@
 package com.nazar.plugins
 
+import com.nazar.feature.logs.routing.logroutes
 import io.ktor.http.*
 import io.ktor.resources.*
 import io.ktor.server.application.*
@@ -13,10 +14,11 @@ import kotlinx.serialization.Serializable
 fun Application.configureRouting() {
 
     install(Resources)
-    routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
-
-    }
+    logroutes()
+//    routing {
+//        get("/") {
+//            call.respondText("Hello World!")
+//        }
+//
+//    }
 }

@@ -15,9 +15,9 @@ class StoreLogUseCase(private val logservice:LogService):BaseUseCase<LogRequest,
 
         val isSuccess= logservice.storeLog(LogModel(tag= input.tag, logMessage = input.log))
         return if(isSuccess)
-            SuccessResponse(HttpStatusCode.OK)
+            SuccessResponse(HttpStatusCode.OK.value)
         else
-            FailureResponse(HttpStatusCode.InternalServerError)
+            FailureResponse(HttpStatusCode.InternalServerError.value)
 
 
     }

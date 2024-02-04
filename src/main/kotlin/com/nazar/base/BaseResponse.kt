@@ -1,15 +1,20 @@
 package com.nazar.base
 
 import io.ktor.http.*
+import kotlinx.serialization.Serializable
 
-interface BaseResponse<T : Any>
+@Serializable
+sealed interface BaseResponse<T : Any>
 
+@Serializable
 data class SuccessResponse<T : Any>(
-    val statusCode: HttpStatusCode,
+    val statusCode: Int,
     val data: T? = null,
 ) : BaseResponse<T>
 
+
+@Serializable
 data class FailureResponse<T : Any>(
-    val statusCode: HttpStatusCode,
+    val statusCode: Int,
     val exception: T? = null,
 ) : BaseResponse<T>
