@@ -2,8 +2,6 @@ package com.nazar
 
 import com.nazar.base.configureStatusPages
 import com.nazar.plugins.*
-import com.nazar.util.ENVNAME
-import com.nazar.util.getEnvironmentVariable
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {

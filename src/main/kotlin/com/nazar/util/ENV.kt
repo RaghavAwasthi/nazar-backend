@@ -12,6 +12,4 @@ fun getEnvironmentVariableOrNull(name:ENVNAME): String? {
 sealed class ENVNAME(var key:String){
     data object CONNECTION_STRING:ENVNAME("MONGO_CONNECTION_STRING")
     data object JWT_SECRET:ENVNAME("JWT_SECRET")
-
-
 }

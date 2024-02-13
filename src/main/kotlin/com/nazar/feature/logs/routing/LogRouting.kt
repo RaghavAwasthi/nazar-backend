@@ -17,7 +17,7 @@ fun Application.logroutes(){
     val fetchLogsUseCase:FetchLogsUseCase by inject()
 
 
-    routing() {
+    routing {
 
         post<LogRequest> ("/logs"){
             val resp= storeLogUseCase.invoke(it)

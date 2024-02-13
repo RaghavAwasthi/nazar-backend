@@ -8,7 +8,10 @@ import org.litote.kmongo.coroutine.CoroutineDatabase
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 
-class MongoDBDatabaseImpl(private val databaseName: String, private val connectionString: ConnectionString) : MongoDBDatabase {
+class MongoDBDatabaseImpl(
+    private val databaseName: String,
+    private val connectionString: ConnectionString)
+    : MongoDBDatabase {
 
     override val initializeName: String
         get() = databaseName

@@ -2,7 +2,6 @@ package com.nazar.plugins
 
 import io.ktor.http.*
 import io.ktor.server.application.*
-import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.plugins.defaultheaders.*
 import io.ktor.server.plugins.openapi.*
@@ -23,15 +22,7 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Delete)
         allowMethod(HttpMethod.Patch)
         allowHeader(HttpHeaders.Authorization)
-        anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
+        anyHost()
     }
-//    install(Compression) {
-//        gzip {
-//            priority = 1.0
-//        }
-//        deflate {
-//            priority = 10.0
-//            minimumSize(1024) // condition
-//        }
-//    }
+
 }

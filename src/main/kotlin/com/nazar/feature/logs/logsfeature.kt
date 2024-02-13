@@ -24,6 +24,4 @@ val logsfeaturemodule= module {
   factory<StoreLogUseCase> { StoreLogUseCase(get())  }
     factory<FetchLogsUseCase> { FetchLogsUseCase(get())  }
 
-
-
 }
