@@ -15,10 +15,10 @@ fun Application.configureRouting() {
 
     install(Resources)
     logroutes()
-//    routing {
-//        get("/") {
-//            call.respondText("Hello World!")
-//        }
-//
-//    }
+    routing {
+        get("/") {
+            call.respondText("Hello World!")
+        }
+
+    }
 }
