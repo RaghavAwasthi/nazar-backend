@@ -31,9 +31,6 @@ jobs:
           chmod +x gradlew
           ./gradlew build
 
-      - name: Run Codacy Analysis CLI
-        uses: codacy/codacy-analysis-cli-action@master
-
       - name: Docker Login
         uses: docker/login-action@v3
         with:
