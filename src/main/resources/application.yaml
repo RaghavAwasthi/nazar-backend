@@ -5,6 +5,9 @@ ktor:
     deployment:
         port: 8080
 jwt:
-  domain: "https://jwt-provider-domain/"
-  audience: "jwt-audience"
-  realm: "ktor sample app"
+  domain: "https://nazar.app"
+  audience: "janta"
+  realm: "Nazar APP"
+  secret: "ye raaz ki baat hai" # Secret overriden by environment variable
+  issuer: "nazar"
+#  connectionString: "mongodb://localhost:27017"
