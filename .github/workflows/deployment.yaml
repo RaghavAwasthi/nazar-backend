@@ -27,7 +27,9 @@ jobs:
         uses: gradle/gradle-build-action@v3
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
